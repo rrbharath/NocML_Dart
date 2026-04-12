@@ -38,7 +38,8 @@ class MinMaxScaler {
           scaledX[i][j] = 0.0;
         } else {
           double std = (X[i][j] - _mins![j]) / diff;
-          scaledX[i][j] = std * (featureRangeMax - featureRangeMin) + featureRangeMin;
+          scaledX[i][j] =
+              std * (featureRangeMax - featureRangeMin) + featureRangeMin;
         }
       }
     }

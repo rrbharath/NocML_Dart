@@ -12,7 +12,7 @@ class NaiveBayes {
 
     int nSamples = X.length;
     int nFeatures = X[0].length;
-    
+
     Map<int, List<List<double>>> classes = {};
     for (int i = 0; i < nSamples; i++) {
       classes.putIfAbsent(y[i], () => []).add(X[i]);
@@ -20,7 +20,7 @@ class NaiveBayes {
 
     classes.forEach((c, samples) {
       _classProbabilities[c] = samples.length / nSamples;
-      
+
       List<double> means = List.filled(nFeatures, 0.0);
       List<double> variances = List.filled(nFeatures, 0.0);
 
@@ -65,7 +65,8 @@ class NaiveBayes {
       List<double> variances = _classVariances[c]!;
 
       for (int j = 0; j < x.length; j++) {
-        posterior += _calculateGaussianLogProbability(x[j], means[j], variances[j]);
+        posterior +=
+            _calculateGaussianLogProbability(x[j], means[j], variances[j]);
       }
 
       if (posterior > maxPosterior) {
@@ -77,7 +78,8 @@ class NaiveBayes {
     return bestClass;
   }
 
-  double _calculateGaussianLogProbability(double x, double mean, double variance) {
+  double _calculateGaussianLogProbability(
+      double x, double mean, double variance) {
     double exponent = exp(-pow(x - mean, 2) / (2 * variance));
     double prob = (1 / sqrt(2 * pi * variance)) * exponent;
     return log(max(prob, 1e-9)); // Prevent log(0)

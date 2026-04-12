@@ -47,7 +47,7 @@ class LogisticRegression {
 
     double linearModel = _dotProduct(x, _weights!) + _bias;
     double yPredicted = _sigmoid(linearModel);
-    
+
     return yPredicted >= 0.5 ? 1 : 0;
   }
 

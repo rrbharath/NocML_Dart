@@ -6,7 +6,7 @@ class EvaluationMetrics {
     if (yTrue.length != yPred.length) {
       throw ArgumentError('yTrue and yPred must have the same length.');
     }
-    
+
     int correct = 0;
     for (int i = 0; i < yTrue.length; i++) {
       if (yTrue[i] == yPred[i]) {

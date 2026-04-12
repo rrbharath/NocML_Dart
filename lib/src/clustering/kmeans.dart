@@ -11,12 +11,13 @@ class KMeans {
     if (X.isEmpty) {
       throw ArgumentError('Input data cannot be empty.');
     }
-    
+
     int nSamples = X.length;
     int nFeatures = X[0].length;
 
     if (k > nSamples) {
-      throw ArgumentError('Number of clusters (k) cannot be greater than the number of samples.');
+      throw ArgumentError(
+          'Number of clusters (k) cannot be greater than the number of samples.');
     }
 
     // Initialize centroids randomly from the data points
@@ -39,7 +40,8 @@ class KMeans {
       }
 
       // Update centroids
-      List<List<double>> newCentroids = List.generate(k, (_) => List.filled(nFeatures, 0.0));
+      List<List<double>> newCentroids =
+          List.generate(k, (_) => List.filled(nFeatures, 0.0));
       for (int i = 0; i < k; i++) {
         if (clusters[i].isEmpty) {
           // If a cluster is empty, keep the old centroid to prevent division by zero

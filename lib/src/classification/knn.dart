@@ -27,7 +27,8 @@ class KNN {
       distances.add({'distance': dist, 'label': _y_train![i]});
     }
 
-    distances.sort((a, b) => (a['distance'] as double).compareTo(b['distance'] as double));
+    distances.sort(
+        (a, b) => (a['distance'] as double).compareTo(b['distance'] as double));
 
     Map<int, int> classCounts = {};
     for (int i = 0; i < k && i < distances.length; i++) {

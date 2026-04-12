@@ -7,6 +7,7 @@ A Dart & Flutter version of the [NocML](https://github.com/Nocturnailed-Communit
 [![Creator](https://img.shields.io/badge/Creator-Muhammad--Ikhwan--Fathulloh-blue)](https://github.com/Muhammad-Ikhwan-Fathulloh)
 [![Repository](https://img.shields.io/badge/Repository-NocML__Dart-green)](https://github.com/Nocturnailed-Community/NocML_Dart)
 [![Issues](https://img.shields.io/github/issues/Nocturnailed-Community/NocML_Dart?color=red)](https://github.com/Nocturnailed-Community/NocML_Dart/issues)
+[![Pub Version](https://img.shields.io/pub/v/noc_ml_dart)](https://pub.dev/packages/noc_ml_dart)
 
 ## 🌟 Overview
 
