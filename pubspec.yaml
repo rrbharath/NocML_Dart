@@ -1,0 +1,15 @@
+name: noc_ml_dart
+description: A Dart/Flutter version of NocML - a lightweight machine learning library featuring Classification (KNN, Naive Bayes, Logistic Regression), Clustering, and Forecasting.
+version: 1.0.0
+homepage: https://github.com/Nocturnailed-Community/NocML_Dart
+repository: https://github.com/Nocturnailed-Community/NocML_Dart
+issue_tracker: https://github.com/Nocturnailed-Community/NocML_Dart/issues
+
+environment:
+  sdk: '>=2.17.5 <4.0.0'
+
+dependencies:
+
+dev_dependencies:
+  test: ^1.21.0
+  lints: ^2.0.0
