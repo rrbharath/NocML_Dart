@@ -4,6 +4,7 @@ library noc_ml_dart;
 export 'src/classification/knn.dart';
 export 'src/classification/naive_bayes.dart';
 export 'src/classification/logistic_regression.dart';
+export 'src/classification/perceptron.dart';
 
 // Export Clustering
 export 'src/clustering/kmeans.dart';

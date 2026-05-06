@@ -50,6 +50,22 @@ void main() {
       expect(nb.predict([8, 9]), equals(1));
       expect(nb.predict([1, 1]), equals(0));
     });
+
+    test('Perceptron prediction', () {
+      var perceptron = Perceptron(learningRate: 0.1, epochs: 100);
+      List<List<double>> X = [
+        [1, 2],
+        [1.5, 1.8],
+        [5, 8],
+        [8, 8],
+        [1, 0.6],
+        [9, 11]
+      ];
+      List<int> y = [0, 0, 1, 1, 0, 1];
+      perceptron.fit(X, y);
+      expect(perceptron.predict([8, 9]), equals(1));
+      expect(perceptron.predict([1, 1]), equals(0));
+    });
   });
 
   group('Clustering Tests', () {
